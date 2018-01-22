@@ -1,0 +1,10 @@
+
+Download chromOut.tar.gz from <<http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/>>
+zcat chromOut.tar.gz >hg19.fa.out
+awk '{print $5"\t"$6"\t"$7"\t"$9"\t"$10"\t"$11}' hg19.fa.out > hg19.fa.bed
+
+Download Table S1. from <<http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002236#s5>>
+Open Excel file and Save as Tab Delimited (.txt) "journal.pgen.1002236.s019.txt"
+
+Download <<ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/integrated_sv_map/ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.vcf.gz>>
+gzip -d ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.vcf.gz

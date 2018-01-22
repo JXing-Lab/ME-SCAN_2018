@@ -1,0 +1,13 @@
+MEI=AluYb8
+MEI_ref_RM=AluYb8\|AluYb9
+MEI_known_stewart=AluYb8\|AluYb9
+MEI_known_dbrip=Alu
+window_size=500
+mapq_bwa=30
+blast_score_R1=75
+blast_score_ref=75
+primer_position=5
+ME_fragment=AluYb8
+repeatcover=off
+clustering_type=flexible
+MEI_known_1kproject=AluY

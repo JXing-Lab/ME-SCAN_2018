@@ -1,0 +1,14 @@
+# For L1HS
+MEI=L1HS
+MEI_ref_RM=L1HS
+MEI_known_stewart=L1
+MEI_known_dbrip=L1
+window_size=500
+mapq_bwa=30
+blast_score_R1=56
+blast_score_ref=56
+primer_position=3
+ME_fragment=L1HS
+repeatcover=off
+clustering_type=flexible
+MEI_known_1kproject=L1HS

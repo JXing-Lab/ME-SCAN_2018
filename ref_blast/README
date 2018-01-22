@@ -1,0 +1,2 @@
+Download human_g1k_v37.fasta.gz from <<ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/>>
+gzip -d human_g1k_v37.fasta.gz

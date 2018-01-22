@@ -1,0 +1,13 @@
+MEI=SVA
+MEI_ref_RM=SVA
+MEI_known_stewart=SVA
+MEI_known_dbrip=SVA
+window_size=500
+mapq_bwa=30
+blast_score_R1=65
+blast_score_ref=65
+primer_position=5
+ME_fragment=SVA
+repeatcover=off
+clustering_type=flexible
+MEI_known_1kproject=SVA

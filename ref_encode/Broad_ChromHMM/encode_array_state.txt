@@ -1,0 +1,15 @@
+10_Txn_Elongation
+11_Weak_Txn
+12_Repressed
+13_Heterochrom/lo
+14_Repetitive/CNV
+15_Repetitive/CNV
+1_Active_Promoter
+2_Weak_Promoter
+3_Poised_Promoter
+4_Strong_Enhancer
+5_Strong_Enhancer
+6_Weak_Enhancer
+7_Weak_Enhancer
+8_Insulator
+9_Txn_Transition

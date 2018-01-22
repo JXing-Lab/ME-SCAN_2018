@@ -1,0 +1,10 @@
+path_mescan=/usr/local/ME-Scan_tools_JuiWan/
+path_samtools=/usr/local/samtools-1.1/
+path_bwa=/usr/local/bwa-0.7.5a/
+path_blast=/usr/local/ncbi-blast-2.2.28+/bin/
+path_liftover=/usr/local/liftOver/
+#path_primer3=/usr/local/primer3-2.3.4/src/
+#path_bedtools=/usr/local/BEDTools-Version-2.16.2/bin/
+#path_primer_thermodynamic_parameters=/usr/local/primer3-2.3.4/src/primer3_config/
+path_sort_temporary_directory=/lab02/sort_temporary-directory/
+path_python3=/usr/local/python3/bin/

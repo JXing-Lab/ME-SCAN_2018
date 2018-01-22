@@ -1,0 +1,9 @@
+path_mescan=/usr/local/ME-Scan_tools/ #==> the location of ME-Scan tools
+path_samtools=/usr/local/samtools-1.1/ #==> the location of samtools  for coverting bam to sam
+path_bwa=/usr/local/bwa-0.7.5a/ #==> the location of bwa for mapping Read2 against hg19 genome 
+path_blast=/usr/local/ncbi-blast-2.2.28+/bin/ #==> the location of blast for filtering of Read1
+path_liftover=/usr/local/liftOver/#==> the location of liftover for lifting previous known polymorphic loci (from hg18 to hg19)
+path_primer3=/usr/local/primer3-2.3.4/src/ #==> the location of PRIMER3 for design genotyping primers
+path_bedtools=/usr/local/BEDTools-Version-2.16.2/bin/
+path_primer_thermodynamic_parameters=/usr/local/primer3-2.3.4/src/primer3_config/
+path_sort_temporary-directory=/lab02/sort_temporary-directory
