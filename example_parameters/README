@@ -5,14 +5,15 @@
     MEI=L1HS
     MEI_ref_RM=L1HS #==> when we make reference MEI dataset, alow this terms based on the interection with RepeatMasker
     MEI_known_stewart=L1 #==> this term is for extracting pMEI dataset from previous study, stewart et al. 2011 
-	MEI_known_dbrip=L1 #==> this term is used for file name of pMEI dataset from previous study, dbRIP / for extracting, MEI was used.
+    MEI_known_dbrip=L1 #==> this term is used for file name of pMEI dataset from previous study, dbRIP / for extracting, MEI was used.
     window_size=500 #==> The range from mapping site
-    mapq_bwa=29 #==> bwa mapping quality
-    blast_score_R1=190 #==> Blast bit score
-    blast_score_ref=190 #==> Blast bit score
+    mapq_bwa=30 #==> bwa mapping quality
+    blast_score_R1=56 #==> Blast bit score
+    blast_score_ref=56 #==> Blast bit score
     primer_position=3 # if the ME specific primer is located on head part (5'), input 5
-    ME_fragment=L1HS_Ewing_2010 #==>this will be used for blast. xxx when file name is xxx_primer.fasta, it can include additional infor mation)
-    repeatcover=on #==> 'on' will be choosed for removing read2s which are 100% covered. If you choose 'off', the option is not available
-    clustering_type=fixed #==> 'fixed' or 'flexible' clustering method can be choosed
+    ME_fragment=L1HS #==>this will be used for blast. xxx when file name is xxx_primer.fasta, it can include additional infor mation)
+    repeatcover=off #==> 'off' do not remove read2s which are 100% covered. 
+    clustering_type=flexible #==> 'fixed' or 'flexible' clustering method can be choosed
+    MEI_known_1kproject=L1HS
 
 # MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g. MEI_ref_RM=AluYb8\|AluYb9

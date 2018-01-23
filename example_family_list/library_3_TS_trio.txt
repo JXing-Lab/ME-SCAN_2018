@@ -1,0 +1,16 @@
+1	4002-Blood	Female	Blood-1	mother
+2	5001-Blood	Female	Blood-1	child
+3	4002-Blood	Female	Blood-2	mother
+4	5003-Blood	Female	Blood-2	child
+5	4002-iPSC	Female	iPSC-1	mother
+6	5001-iPSC	Female	iPSC-1	child
+7	4002-iPSC	Female	iPSC-2	mother
+8	5003-iPSC	Female	iPSC-2	child
+9	4002-Neuron	Female	Neuron-1	mother
+10	5001-Neuron	Female	Neuron-1	child
+11	4002-Neuron	Female	Neuron-2	mother
+12	5003-Neuron	Female	Neuron-2	child
+13	4002-NSC	Female	NSC-1	mother
+14	5001-NSC	Female	NSC-1	child
+15	4002-NSC	Female	NSC-2	mother
+16	5003-NSC	Female	NSC-2	child

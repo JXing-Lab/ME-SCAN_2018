@@ -7,3 +7,4 @@ path_primer3=/usr/local/primer3-2.3.4/src/ #==> the location of PRIMER3 for desi
 path_bedtools=/usr/local/BEDTools-Version-2.16.2/bin/
 path_primer_thermodynamic_parameters=/usr/local/primer3-2.3.4/src/primer3_config/
 path_sort_temporary-directory=/lab02/sort_temporary-directory
+path_python3=/usr/local/python3/bin/ #==> the location of python3

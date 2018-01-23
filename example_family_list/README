@@ -1,2 +1,7 @@
-library_81_107_info_trio.txt is required as the input file for step D of ME-SCAN.sh.
-samples.ped is the pedigree for all samples.
+For the 12 trios library, library_12_trios.txt is required as the input file for step D of ME-SCAN.sh. 12_trios_samples.ped is the pedigree for all 12 trios samples. For this library, we generated 3 separate libraries for Alu, LINE, and SVA respectively, thus we used standard pipeline for data analysis.
+For the 3_TS_samples, library_3_TS_trio.txt is required as the input file for step D of ME-SCAN.sh. 3_TS_samples.ped is the pedigree for all 12 samples (Blood, iPSC, NSC, and Neuron for each individual). There are several modifications:
+1. Replace modules/JW_template_inheritance_calculation_for_latest_data_with_TPM-UR_filters.py with modules/JW_TS_inheritance_calculation.py for step D4)
+2. Run steps 1a and 1b in addition to step 1. (since for this library, we pooled together Alu, LINE, and SVA mobile elements into a single run, thus we have to include JW_separate_into_ME.py and JW_separate_BB_sorted_bam.py into standard pipeline for data analysis)
+3. Instead of step E for converting bed to vcf format, run modules/JW_TS_insertion_among_ind.py to generate list of insertions in one individual (refer to modules/bash_template_for_running_JW_TS_insertion_among_ind.sh for command line)
+4. To generate concordance analysis across cell types, run modules/JW_TS_concordance_analysis.py 
+   command line: python modules/JW_TS_concordance_analysis.py --mei SVA --option_tag .30.65.65.500.repeatcover_off.flexible. --path /lab01/Projects/MEScan/MEScan_Paper/analysis/analysis_3_TS_samples/

@@ -28,7 +28,6 @@ ref_blast
 ref_encode
 ref_gencode
 ref_mescan
-ref_mosaik 
 
 # .parameters include ..
 <parameter>
@@ -43,8 +42,6 @@ ref_mosaik
         blast_score_ref #==> Blast bit score for reference MEIs
         primer_position #==> if the ME-specific primer is located on the 5' of the ME, input 5
         ME_fragment  #==>this will be used for blast. xxx when file name is xxx_primer.fasta, it can include additional infor mation) # Caution: direction primer binding site to end of ME
-        ME_specific_first_primer 
-        ME_specific_seminested_primer 
         repeatcover #==> 'on' will be choosed for removing read2s which are 100% covered by known MEs. If you choose 'off', the option is not available
         clustering_type #==> 'fixed' or 'flexible' clustering method can be choosed
 
@@ -68,8 +65,8 @@ Download whole codes.
 Download and modify reference file based on their own README in each "ref_"* subdirectories.
 # preparation_3
 Make pathfile named as "ME-Scan.path" and parameterfile with ".parameters" extension in the working directory. There are methods how to make 
-# Executable file: ME-SCAN-SVA.sh 
-the user should use "source" command "source /"software_path"/ME-SCAN-SVA.sh" in the working directory.
+# Executable file: ME-SCAN.sh 
+the user should use "source" command "source /"software_path"/ME-SCAN.sh" in the working directory.
 
 ##
 
