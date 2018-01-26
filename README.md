@@ -1,30 +1,33 @@
 
 # ME-Scan analysis codes for the Alu, LINE, and SVA libraries.
 
-#### MEScanner is an intergrated tool for identifying polymorphic mobile element insertions (MEIs) using targeted high throughput sequencing.
-#### Author: Hongseok Ha, JuiWan Loh, Jinchuan Xing
-#### Current version : 1.2
-#### Last update date : 10 April 2016
-#### Homepage: <http://xinglab.genetics.rutgers.edu/>
-#### Programmer's contact: <hha@hotmail.com>
-#### PI's contact: <xing@biology.rutgers.edu>
+MEScanner is an intergrated tool for identifying polymorphic mobile element insertions (MEIs) using targeted high throughput sequencing.
+* Author: Hongseok Ha, JuiWan Loh, Jinchuan Xing
+* Current version : 1.2
+* Last update date : 10 April 2016
+* Homepage: <http://xinglab.genetics.rutgers.edu/>
+* Programmer's contact: <hha@hotmail.com>
+* PI's contact: <xing@biology.rutgers.edu>
 
-#### Requireements: BWA, Blast, LiftOver, Samtools, Bedtools, Primer3
+### Requireements: BWA, Blast, LiftOver, Samtools, Bedtools, Primer3
 
-### preparation_0:
-1. the target directory should include subdirectories named as "Sample_...\*", which contain Fastq files in pair-end format
-2. a file with .parameters extension should be located in the target directory
+### To run the code:
+1. Download whole code and source the main command `source /"software_path"/ME-SCAN.sh`.
+2. Download and modify reference file based on their own README in each "ref_\*" subdirectories.
+3. Creat a pathfile named as "ME-Scan.path" and parameterfile with ".parameters" as extension in the working directory. 
+4. The working directory should include subdirectories named as "Sample_...\*", which contain Fastq files in pair-end format.
+5. Running the main command `ME-SCAN.sh`. 
 
-### Folders
-* example_family_list: contains an example named "family_list.ped" << Format: Family_ID   Individual_ID     Father  Mother  Sex >>
-example_parameters: contains examples of .parameters files
-* modules
+### Folders:
+* example_family_list: contains an example named "family_list.ped" 
+* example_parameters: contains examples of .parameters files
+* modules: individual analysis modules
 * ref_blast 
 * ref_encode
 * ref_gencode
 * ref_mescan
 
-### .parameters file include the following parameters:
+### The .parameters file includes the following parameters:
 \<parameter\>
 * MEI_ref_RM  #==> when we make reference MEI dataset, alow this terms based on the interection with RepeatMasker
 * MEI_known_stewart #==> this term is for extracting pMEI dataset from previous study, Stewart et al. 2011
@@ -52,17 +55,3 @@ example_parameters: contains examples of .parameters files
 * path_primer3 #==> the location of primer3 
 * path_bedtools #==> the location of bedtools
 * path_primer_thermodynamic_parameters
-
-### preparation_1
-Download whole codes.
-
-### preparation_2
-Download and modify reference file based on their own README in each "ref_"* subdirectories.
-
-### preparation_3
-Creat a pathfile named as "ME-Scan.path" and parameterfile with ".parameters" extension in the working directory. 
-
-
-### Executable file: ME-SCAN.sh 
-* the user should use "source" command <source /"software_path"/ME-SCAN.sh> in the working directory.
-
