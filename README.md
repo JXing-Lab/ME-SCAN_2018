@@ -35,14 +35,14 @@ MEScanner is an intergrated tool for identifying polymorphic mobile element inse
 * MEI_known_1kproject ==> Name of the pMEIs to be extracted from Sudmant et al. 2015
 * window_size  ==> The range to consider from the mapping site
 * mapq_bwa  ==> bwa mapping quality cutoff 
-* blast_score_R1 ==> Blast bit score cutoff for Read 1
+* blast_score_R1 ==> Blast bit score cutoff for Read1
 * blast_score_ref ==> Blast bit score cutoff for reference MEIs
-* primer_position ==> [5|3], if the ME-specific primer is located on the 5' of the ME, input 5, if the ME-specific primer is located on the 3' of the ME, input 3. 
+* primer_position ==> [5|3], if the ME-specific primer is located on the 5' of the ME, input `5`, if the ME-specific primer is located on the 3' of the ME, input `3`. 
 * ME_fragment ==> the ME sequence that will be used for blast. xxx when file name is xxx_primer.fasta
   Caution: direction primer binding site to end of ME
-* repeatcover ==> [on|off], if 'on' is specified, Read2s which are 100% covered by known MEs will be removed. 
+* repeatcover ==> [on|off], if `on` is specified, Read2s which are 100% covered by known MEs will be removed. 
 * clustering_type ==> [fixed|flexible], clustering methods allowing fixed or flexible window
-  note: ==> MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g., `MEI_ref_RM=AluYb8\|AluYb9`
+  note: ==> MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g., `MEI_ref_RM=AluYb8|AluYb9`
 
 \<path\>
 * path_mescan ==> the location of ME-Scan tool
