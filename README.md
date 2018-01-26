@@ -1,77 +1,68 @@
 
-ME-Scan analysis codes for the Alu, LINE, and SVA libraries.
+# ME-Scan analysis codes for the Alu, LINE, and SVA libraries.
 
+#### MEScanner is an intergrated tool for identifying polymorphic mobile element insertions (MEIs) using targeted high throughput sequencing.
+#### Author: Hongseok Ha, JuiWan Loh, Jinchuan Xing
+#### Current version : 1.2
+#### Last update date : 10 April 2016
+#### Homepage: <http://xinglab.genetics.rutgers.edu/>
+#### Programmer's contact: <hha@hotmail.com>
+#### PI's contact: <xing@biology.rutgers.edu>
 
+#### Requireements: BWA, Blast, LiftOver, Samtools, Bedtools, Primer3
 
-MEScanner is an intergrated tool for identifying polymorphic mobile element insertions (MEIs) using targeted high throughput sequencing.
+### preparation_0:
+1. the target directory should include subdirectories named as "Sample_...\*", which contain Fastq files in pair-end format
+2. a file with .parameters extension should be located in the target directory
 
-# Author: Hongseok Ha, JuiWan Loh, Jinchuan Xing
+### Folders
+* example_family_list: contains an example named "family_list.ped" << Format: Family_ID   Individual_ID     Father  Mother  Sex >>
+example_parameters: contains examples of .parameters files
+* modules
+* ref_blast 
+* ref_encode
+* ref_gencode
+* ref_mescan
 
-# Current version : 1.2
+### .parameters file include the following parameters:
+\<parameter\>
+* MEI_ref_RM  #==> when we make reference MEI dataset, alow this terms based on the interection with RepeatMasker
+* MEI_known_stewart #==> this term is for extracting pMEI dataset from previous study, Stewart et al. 2011
+* MEI_known_dbrip #==> this term is used for file name of pMEI dataset from dbRIP (dbrip.org) / for extracting, MEI was used.
+* MEI_known_1kproject #==> this term is for extracting pMEI dataset from previous study, Sudmant et al. 2015
+* window_size  #==> The range from mapping site
+* mapq_bwa  #==> bwa mapping quality
+* blast_score_R1 #==> Blast bit score for Read 1
+* blast_score_ref #==> Blast bit score for reference MEIs
+* primer_position #==> if the ME-specific primer is located on the 5' of the ME, input 5
+* ME_fragment  #==>this will be used for blast. xxx when file name is xxx_primer.fasta, it can include additional infor mation)
+  Caution: direction primer binding site to end of ME
+* repeatcover #==> 'on' will be choosed for removing read2s which are 100% covered by known MEs. If you choose 'off', the option is not available
+* clustering_type #==> 'fixed' or 'flexible' clustering method can be choosed
+  note: ==> MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g. MEI_ref_RM=AluYb8\|AluYb9
 
-# Last update date : 10 April 2016
+\<path\>
+* path_mescan #==> the location of ME-Scan tools
+* path_samtools #==> the location of samtools for coverting bam to sam
+* path_bwa #==> the location of bwa for mapping Read2 against the genome
+* path_blast #==> the location of blast for filtering of Read1
+* path_liftover #==> the location of liftover for lifting previous known polymorphic loci (from hg18 to hg19)
+* path_sort_temporary_directory
+* path_python3 #==> the location of python3
+* path_primer3 #==> the location of primer3 
+* path_bedtools #==> the location of bedtools
+* path_primer_thermodynamic_parameters
 
-# Homepage: <http://xinglab.genetics.rutgers.edu/>
-
-# Programmer's contact: <hha@hotmail.com>
-
-# PI's contact: <xing@biology.rutgers.edu>
-
-# Purpose : Identification and analysis of polymorphic MEIs using ME-Scan data with BWA-BLAST pipeline.
-
-# Requireements: BWA, Blast, LiftOver, Samtools, Bedtools, Primer3
-
-# preparation_0:
-1. target directory includes subdirectories (named as "Sample_...") containing Fastq files (pair_end)
-2. file with .parameters extension should be located in the target directory
-
-# Folders
-example_family_list >> contains an example named "family_list.ped" << Format: Family_ID   Individual_ID     Father  Mother  Sex >>
-example_parameters >> contains examples of .parameters files
-modules
-ref_blast 
-ref_encode
-ref_gencode
-ref_mescan
-
-# .parameters include ..
-<parameter>
-        MEI
-        MEI_ref_RM  #==> when we make reference MEI dataset, alow this terms based on the interection with RepeatMasker
-        MEI_known_stewart #==> this term is for extracting pMEI dataset from previous study, Stewart et al. 2011
-        MEI_known_dbrip #==> this term is used for file name of pMEI dataset from dbRIP (dbrip.org) / for extracting, MEI was used.
-        MEI_known_1kproject #==> this term is for extracting pMEI dataset from previous study, Sudmant et al. 2015
-        window_size  #==> The range from mapping site
-        mapq_bwa  #==> bwa mapping quality
-        blast_score_R1 #==> Blast bit score for Read 1
-        blast_score_ref #==> Blast bit score for reference MEIs
-        primer_position #==> if the ME-specific primer is located on the 5' of the ME, input 5
-        ME_fragment  #==>this will be used for blast. xxx when file name is xxx_primer.fasta, it can include additional infor mation) # Caution: direction primer binding site to end of ME
-        repeatcover #==> 'on' will be choosed for removing read2s which are 100% covered by known MEs. If you choose 'off', the option is not available
-        clustering_type #==> 'fixed' or 'flexible' clustering method can be choosed
-
-        # ==> MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g. MEI_ref_RM=AluYb8\|AluYb9
-
-<path>
-        path_mescan #==> the location of ME-Scan tools
-        path_samtools #==> the location of samtools for coverting bam to sam
-        path_bwa #==> the location of bwa for mapping Read2 against the genome
-        path_blast #==> the location of blast for filtering of Read1
-        path_liftover #==> the location of liftover for lifting previous known polymorphic loci (from hg18 to hg19)
-        path_sort_temporary_directory
-        path_python3 #==> the location of python3
-        path_primer3 #==> the location of primer3 
-        path_bedtools #==> the location of bedtools
-        path_primer_thermodynamic_parameters
-
-# preparation_1
+### preparation_1
 Download whole codes.
-# preparation_2
-Download and modify reference file based on their own README in each "ref_"* subdirectories.
-# preparation_3
-Make pathfile named as "ME-Scan.path" and parameterfile with ".parameters" extension in the working directory. There are methods how to make 
-# Executable file: ME-SCAN.sh 
-the user should use "source" command "source /"software_path"/ME-SCAN.sh" in the working directory.
 
-##
+### preparation_2
+Download and modify reference file based on their own README in each "ref_"* subdirectories.
+
+### preparation_3
+Creat a pathfile named as "ME-Scan.path" and parameterfile with ".parameters" extension in the working directory. 
+
+
+### Executable file: ME-SCAN.sh 
+* the user should use "source" command <source /"software_path"/ME-SCAN.sh> in the working directory.
 
