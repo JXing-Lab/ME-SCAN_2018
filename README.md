@@ -1,6 +1,11 @@
+
+ME-Scan analysis codes for the Alu, LINE, and SVA libraries.
+
+
+
 MEScanner is an intergrated tool for identifying polymorphic mobile element insertions (MEIs) using targeted high throughput sequencing.
 
-# Author(programmer): Hongseok Ha, JuiWan Loh, Jinchuan Xing
+# Author: Hongseok Ha, JuiWan Loh, Jinchuan Xing
 
 # Current version : 1.2
 
@@ -12,18 +17,18 @@ MEScanner is an intergrated tool for identifying polymorphic mobile element inse
 
 # PI's contact: <xing@biology.rutgers.edu>
 
-# Purpose : Identification and analysis of MEIs using ME-Scan data with BWA-BLAST pipeline.
+# Purpose : Identification and analysis of polymorphic MEIs using ME-Scan data with BWA-BLAST pipeline.
 
 # Requireements: BWA, Blast, LiftOver, Samtools, Bedtools, Primer3
 
-# prepation_0:
+# preparation_0:
 1. target directory includes subdirectories (named as "Sample_...") containing Fastq files (pair_end)
-2. file with .parameters extension should be located at target directory
+2. file with .parameters extension should be located in the target directory
 
 # Folders
-example_family_list >> the folder contains an example named as "family_list.ped" << Format: Family_ID   Individual_ID     Father  Mother  Sex >>
-example_parameters >> the folder contains examples of .parameter files
-previous_codes
+example_family_list >> contains an example named "family_list.ped" << Format: Family_ID   Individual_ID     Father  Mother  Sex >>
+example_parameters >> contains examples of .parameters files
+modules
 ref_blast 
 ref_encode
 ref_gencode
