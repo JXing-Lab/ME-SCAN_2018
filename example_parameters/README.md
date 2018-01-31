@@ -2,7 +2,7 @@
 
 # example L1HS.parameters
 
-    MEI=L1HS
+- MEI=L1HS
     MEI_ref_RM=L1HS #==> when we make reference MEI dataset, alow this terms based on the interection with RepeatMasker
     MEI_known_stewart=L1 #==> this term is for extracting pMEI dataset from previous study, stewart et al. 2011 
     MEI_known_dbrip=L1 #==> this term is used for file name of pMEI dataset from previous study, dbRIP / for extracting, MEI was used.
@@ -16,4 +16,4 @@
     clustering_type=flexible #==> 'fixed' or 'flexible' clustering method can be choosed
     MEI_known_1kproject=L1HS
 
-# MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g. MEI_ref_RM=AluYb8\|AluYb9
+### MEI_ref_RM, MEI_known_stewart, MEI_known_dbrip can allow multiple terms using regular expression e.g. MEI_ref_RM=AluYb8\|AluYb9
