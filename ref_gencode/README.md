@@ -1,4 +1,4 @@
-### This folder contains the human reference genome gene annotation file used for pMEI annotation.
+# This folder contains the human reference genome gene annotation file used for pMEI annotation.
 
 1. Download gencode.v19.annotation.gtf from <http://www.gencodegenes.org/releases/19.html>
 2. Generate the file "gencode.v19.protein_coding.bed":
