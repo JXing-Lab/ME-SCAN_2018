@@ -1,3 +1,0 @@
-Download *bed.gz from <<http://hgdownload-test.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHmm/>>
-
-gzip -d *bed.gz

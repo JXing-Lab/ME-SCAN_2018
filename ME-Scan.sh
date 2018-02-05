@@ -34,7 +34,7 @@ reexecute=$1
 parameters_file=$2
 
 # Software info
-Software="juiwan_linux_mescan_SVA"
+Software="ME-Scan"
 Software_ver="1.1"
 Software_sub="BWA-BLAST"
 
