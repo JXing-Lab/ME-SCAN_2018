@@ -13,7 +13,7 @@ To generate variants files from 1000 genome project phase 3:
 1. Download <ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/integrated_sv_map/ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.vcf.gz>
 2. gzip -d ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.vcf.gz
 
-The files "dbrip_Alu_hg19_v2h.txt" and "dbrip_SVA_hg19_v2h.txt" will be used to remove variants identified in dbRIP
+The files "dbrip_Alu_hg19_v2h.txt", "dbrip_L1_hg19_v2h.txt", and "dbrip_SVA_hg19_v2h.txt" will be used to remove variants identified in dbRIP
 
 The file "ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.individuals.list" will be used to provide list of individuals in 1000 genome project
 
