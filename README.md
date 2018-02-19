@@ -19,8 +19,8 @@ MEScanner is an intergrated tool for identifying polymorphic mobile element inse
 5. Running the main command `ME-SCAN.sh`. 
 
 ### Folders:
-* example_family_list: example pedigree file 
-* example_parameters: example parameters files
+* family_info: pedigree files for all samples used in the study 
+* parameters_info: parameters files used in the study 
 * modules: individual analysis modules
 * ref_blast 
 * ref_encode
