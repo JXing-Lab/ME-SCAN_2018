@@ -1,4 +1,4 @@
-# family information files used for pMEI inheritance analysis
+# Pedigree files used for analysis
 
 * The files "library_12_trios.txt" (for 12 trios library) and "library_3_TS_trio.txt" (for 3 TS library) will be used by module `JW_template_inheritance_calculation_for_latest_data_with_TPM-UR_filters.py` in step D4 of the pipeline `MEScaner.sh`.
 
