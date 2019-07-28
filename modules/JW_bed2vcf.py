@@ -8,7 +8,7 @@ parser.add_argument('--primer_pos',nargs='*')
 
 args=parser.parse_args()
 input_f=args.input_file
-primer_end=args.primer_pos
+primer_end=args.primer_pos[0]
 #print input_f
 
 all_ind = []         # used for header
